@@ -25,8 +25,7 @@ timezone: "America/Los_Angeles"
 
 # Build settings
 markdown: kramdown
-theme: minima
-# theme: jekyll-theme-dinky
+theme: jekyll-theme-dinky
 plugins:
   - jekyll-feed
 
@@ -35,7 +34,7 @@ defaults:
       path: ""
       type: posts
     values:
-        layout: post
+        layout: default
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
