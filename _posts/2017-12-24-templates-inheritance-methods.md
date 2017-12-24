@@ -9,7 +9,7 @@ Mixing templates and inheritance can cause some unfamiliar and confusing compile
 ## The problem
 
 A convoluted title for a somewhat convoluted subject. Imagine you have the
-following templated class
+following class template
 
 ```cpp
 template <typename T>
@@ -130,7 +130,7 @@ way. It is a lot more resilient to code changes; if you change the name of
 `Base<T>` in the examples above, `this->` would still work correctly, while
 the others would have to be updated accordingly.
 
-This can be particularly important when dealing with templated classes with
+This can be particularly important when dealing with class templates with
 virtual member functions.
 
 ```cpp
@@ -170,7 +170,7 @@ void Derived<T>::call_method() {
 ## A wrinkle
 
 In all the above examples, `this->` works because it refers to the **current
-instantiation** (of the templated class). If, on the other hand, you're
+instantiation** (of the class templates). If, on the other hand, you're
 referring to a different template instantiation while in a template
 instantiation (essentially, a dependent template), you have to make use of
 the `template` keyword in a way different than you may be used to.
@@ -191,8 +191,35 @@ struct Derived : Base<T> {
 ```
 
 In order for `Derived<T>::method_2()` to call `Base<T>::method_1<U>()`, the
-name of the template member function needs to be prefixed with the keyword
-`template`.
+name of the member function template needs to be prefixed with the keyword
+`template`. This is because the member function represented by
+`Base<T>::method_1<U>()` (i.e., the fully instantiated member function) is
+not available in the instantiation of the class template (`Derived<T>`). As a
+result, the C++ parsing rules state that the `<` in `this->method_1<T>()` be
+read as a less-than sign. The use of the `template` keyword tells the
+compiler to look at the original class template for the definition of the
+member function template and instead instantiate that. In fact, the
+`template` keyword can be used in this manner to even refer to member
+functions (as opposed to member function **templates**). It just isn't
+explicitly required.
+
+```cpp
+template <typename T>
+struct Base {
+    template <typename U>
+    void method_1() {}
+
+    void method_2() {}
+};
+
+template <typename T>
+struct Derived : Base<T> {
+    void method_3() {
+        this->template method_1<T>();
+        this->template method_2();
+    }
+};
+```
 
 ## A note about Visual Studio's behavior
 
