@@ -1,6 +1,6 @@
 ---
 toc:    true
-title:  "Templated classes, their templated parents, and their templated methods"
+title:  "Class templates, their parent templates, and their method templates"
 date:   2017-12-24
 ---
 
@@ -22,7 +22,7 @@ struct Base {
 ```
 
 Now, if you want to inherit from this class, chances are that you want to
-support the full range of templated parameters of the base class, so you would
+support the full range of template parameters of the base class, so you would
 write your derived class as follows:
 
 ```cpp
@@ -70,7 +70,7 @@ Lookup**. Among other things, the first phase is responsible for looking up
 non-dependent names, while the second phase is responsible for the dependent
 name lookup.
 
-One of the reasons for this is to allow for templated code to refer to
+One of the reasons for this is to allow for template code to refer to
 functions or classes that are visible only at the point of template
 instantiation, not at the point of definition.
 
@@ -232,4 +232,3 @@ the special treatment of dependent names in template definitions.
 ## Further reading
 
 [Dependent Names](http://en.cppreference.com/w/cpp/language/dependent_name)
-
