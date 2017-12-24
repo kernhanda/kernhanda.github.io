@@ -15,9 +15,6 @@ following templated class
 template <typename T>
 struct Base {
     void method_1() {}
-
-    template <typename U>
-    void method_2() {}
 };
 ```
 
