@@ -10,7 +10,7 @@ repository: "kernhanda/kernhanda.github.io"
 author:
     name: "Kern Handa"
     avatar: https://avatars0.githubusercontent.com/u/1303719
-    bio: I’m a developer at Microsoft Research, working on <a href="https://github.com/microsoft/ell">ELL</a>.
+    bio: I’m a developer at Microsoft Research, working on <u><a href="https://github.com/microsoft/ell">ELL</a></u>.
     location: WA, USA
     linkedin: kernhanda
     github: kernhanda
@@ -47,7 +47,7 @@ sass:
 
 # theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "contrast"
 
 plugins:
   - jekyll-paginate
