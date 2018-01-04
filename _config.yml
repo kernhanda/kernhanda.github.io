@@ -15,6 +15,10 @@ author:
     linkedin: kernhanda
     github: kernhanda
 
+comments:
+    provider: "staticman_v2"
+staticman:
+    branch: "master"
 
 # Outputting
 permalink: /:categories/:title/
@@ -74,6 +78,7 @@ defaults:
         author_profile: true
         read_time: true
         share: true
+        comments: true
 
 compress_html:
     clippings: all
