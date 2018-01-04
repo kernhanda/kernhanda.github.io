@@ -61,6 +61,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-sitemap
   # - jekyll-data
 
 whitelist:
@@ -69,6 +70,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-sitemap
   # - jekyll-data
 
 defaults:
