@@ -1,5 +1,5 @@
 title: Kern's Dev Notes
-title_separator: "|"
+title_separator: "&#124;"
 email: kern.handa@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Random notes from a random developer. Likely to be focused around C++ and Python.
