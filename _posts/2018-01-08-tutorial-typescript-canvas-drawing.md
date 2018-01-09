@@ -299,7 +299,7 @@ touch event, otherwise it's a mouse event.
 
 ## Demo
 
-You can see a live demo of this tutorial [here](https://kernhanda.github.io/blog-demos/canvas/).
+You can see a live demo of this tutorial [here](/demos/canvas/).
 
 ## Further reading
 
