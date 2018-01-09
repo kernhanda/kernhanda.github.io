@@ -1,7 +1,7 @@
 ---
 title:  "Creating a canvas to draw on using Typescript"
 date:   2018-01-03
-draft: true
+toc:    true
 ---
 A quick tutorial on how to create a small web application to handle the user
 drawing on HTML `canvas` elements.
@@ -59,15 +59,19 @@ as a foreshadowing of what we're going to make.
 
 ```html
 <html>
-    <head>
-        <title>Canvas demo</title>
-    </head>
-    <body>
-        <canvas id="canvas" width="490" height="490"
-            style="border: 1px solid black;" />
-        <p id="clear">clear</p>
-        <script src="main.js" />
-    </body>
+
+<head>
+    <title>Canvas demo</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="490" height="490"
+            style="border: 1px solid black;">
+    </canvas>
+    <p id="clear">clear</p>
+    <script src="main.js"></script>
+</body>
+
 </html>
 ```
 
@@ -106,8 +110,8 @@ private clickY: number[] = [];
 private clickDrag: boolean[] = [];
 
 constructor() {
-    let canvas = document.getElementById('canvas')
-                    as HTMLCanvasElement;
+    let canvas = document.getElementById('canvas') as
+                 HTMLCanvasElement;
     let context = canvas.getContext("2d");
     context.lineCap = 'round';
     context.lineJoin = 'round';
@@ -193,7 +197,6 @@ private clearCanvas() {
     this.clickX = [];
     this.clickY = [];
     this.clickDrag = [];
-    this.clearPrediction();
 }
 ```
 
@@ -293,6 +296,10 @@ that the event handler is called for both mouse and touch events and thus the
 type of `e` can vary. We detect the type of the event argument by checking
 for the presence of the `changedTouches` field; if it's present, we have a
 touch event, otherwise it's a mouse event.
+
+## Demo
+
+You can see a live demo of this tutorial [here](https://kernhanda.github.io/blog-demos/canvas/).
 
 ## Further reading
 
