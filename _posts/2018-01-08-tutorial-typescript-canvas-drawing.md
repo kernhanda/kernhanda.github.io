@@ -1,6 +1,6 @@
 ---
 title:  "Creating a canvas to draw on using Typescript"
-date:   2018-01-03
+date:   2018-01-08
 toc:    true
 ---
 A quick tutorial on how to create a small web application to handle the user
