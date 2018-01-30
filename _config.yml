@@ -52,8 +52,6 @@ sass:
     sass_dir: _sass
     style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-# theme: minimal-mistakes-jekyll
-remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "contrast"
 
 plugins:
@@ -61,18 +59,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-sitemap
-  # - jekyll-data
 
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-sitemap
-  # - jekyll-data
 
 defaults:
   - scope:
